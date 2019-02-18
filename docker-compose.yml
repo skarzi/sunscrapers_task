@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  scrapers:
+    build:
+      context: ./
+      dockerfile: ./docker/scrapers/Dockerfile
+    volumes:
+      - ./scrapers:/app
+      - /etc/localtime:/etc/localtime:ro
